@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Joseph RF – Projects</title>
+<meta name="description" content="A collection of projects by Joseph RF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fdfdfc;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --line: #e6e6e8;
+    --accent: #2f4fd1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16161a;
+      --text: #ececee;
+      --muted: #9a9aa2;
+      --line: #2c2c33;
+      --accent: #8fa3ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .page { max-width: 880px; margin: 0 auto; padding: 72px 24px 56px; }
+  h1 {
+    font-size: 2.6rem; line-height: 1.1; font-weight: 600;
+    letter-spacing: -0.02em; margin: 0 0 16px;
+  }
+  .intro { color: var(--muted); font-size: 1.1rem; max-width: 52ch; margin: 0 0 56px; }
+  h2 { font-size: 1rem; font-weight: 500; color: var(--muted); margin: 0 0 16px; }
+
+  .projects {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 28px;
+  }
+  .preview {
+    display: block;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background-color: color-mix(in srgb, var(--tint, #cfd6ff) 40%, var(--bg));
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: 14px;
+    transition: border-color 0.15s;
+  }
+  .project a.preview:hover { border-color: var(--accent); }
+  .project h3 { font-size: 1.15rem; font-weight: 500; margin: 0 0 4px; }
+  .project h3 a { color: var(--text); text-decoration: none; }
+  .project h3 a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
+  .project p { margin: 0 0 6px; }
+  .tech { font-size: 0.9rem; color: var(--muted); }
+
+  footer { margin-top: 56px; font-size: 0.95rem; color: var(--muted); }
+  footer a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  @media (max-width: 640px) {
+    .page { padding-top: 48px; }
+    h1 { font-size: 2.1rem; }
+    .projects { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- EDIT: your name and a short intro -->
+  <h1>Joseph RF</h1>
+  <p class="intro">I build small graphics programming related projects and games in my spare time.
+    Here are few.
+  </p>
+
+  <h2>Projects</h2>
+  <ul class="projects">
+
+    <li class="project">
+      <a class="preview" href="https://github.com/joseph-rf/voxelwizard"
+         style="--tint:#b9c4ff; background-image:url('images/voxel_wizard_preview.png')"
+         role="img" aria-label="Screenshot of Voxel Wizard"></a>
+      <h3><a href="https://github.com/joseph-rf/voxelwizard">Voxel Wizard</a></h3>
+      <p>A 2.5D iso voxel game built using OpenGL and ECS architecture.</p>
+      <span class="tech">C++, OpenGL, ImGUI</span>
+    </li>
+
+    <li class="project">
+      <a class="preview" href="https://github.com/joseph-rf/raytracer_engine"
+         style="--tint:#a8e0c8; background-image:url('images/raytracer_engine_preview.png')"
+         role="img" aria-label="Screenshot of ray tracer engine"></a>
+      <h3><a href="https://github.com/joseph-rf/raytracer_engine">RayTracer Engine</a></h3>
+      <p>Rendering software featuring object creation and edition.</p>
+      <span class="tech">C++, OpenGL, ImGUI</span>
+    </li>
+
+    <li class="project">
+      <a class="preview" href="https://github.com/joseph-rf/raytracer"
+         style="--tint:#f5c4b3; background-image:url('images/cornell_box_glass_cow.png')"
+         role="img" aria-label="Screenshot of Recipe sorter"></a>
+      <h3><a href="https://github.com/joseph-rf/raytracer">RayTracer</a></h3>
+      <p>A CPU-based ray tracer that simulates the behaviour of light.</p>
+      <span class="tech">C++, SFML</span>
+    </li>
+
+    <li class="project">
+      <a class="preview" href="https://github.com/joseph-rf/2Dphysicsengine"
+         style="--tint:#f2dc9b; background-image:url('images/2d_physics_engine_preview.png')"
+         role="img" aria-label="Screenshot of 2D physics engine"></a>
+      <h3><a href="https://github.com/joseph-rf/2Dphysicsengine">2D Physics Engine</a></h3>
+      <p>An interactive two dimensional physics engine featuring multiple primitives and springs.</p>
+      <span class="tech">C++, SFML</span>
+    </li>
+
+  </ul>
+
+  <footer>
+    <a href="https://github.com/joseph-rf">GitHub</a>
+    &nbsp;&nbsp;
+    <a href="mailto:you@example.com">Email</a>
+  </footer>
+
+</main>
+</body>
+</html>
